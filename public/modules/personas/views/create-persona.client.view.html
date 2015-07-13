@@ -1,4 +1,4 @@
-<section data-ng-controller="PersonasController">
+<section data-ng-controller="PersonasController" data-ng-init="find()">
   <div class="page-header">
     <h1>Crear Persona</h1>
   </div>
@@ -57,14 +57,14 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="universidad.origen">Universidad Origen</label>
-          <div class="controls">
-            <input type="text" data-ng-model="universidad.origen" id="universidad.origen" class="form-control" placeholder="Universidad Origen" required>
+          <div class="controls">            
+            <select data-ng-model="universidad.origen" id="universidad.origen" class="form-control" data-ng-options="universidad._id as universidad.name for universidad in universidades"></select>                        
           </div>
         </div>
         <div class="form-group">
           <label class="control-label" for="universidad.destino">Universidad Destino</label>
           <div class="controls">
-            <input type="text" data-ng-model="universidad.destino" id="universidad.destino" class="form-control" placeholder="Universidad Destino" required>
+            <select data-ng-model="universidad.destino" id="universidad.origen" class="form-control" data-ng-options="universidad._id as universidad.name for universidad in universidades"></select>
           </div>
         </div>
         <div class="form-group">
@@ -82,20 +82,19 @@
         <div class="form-group">
           <label class="control-label" for="condicion">Condición</label>
           <div class="controls">
-            <input type="text" data-ng-model="condicion" id="condicion" class="form-control" placeholder="Condición" required>
+            <select data-ng-model="condicion" class="form-control" data-ng-options="condicion._id as condicion.name for condicion in condiciones"></select>            
           </div>
         </div>
         <div class="form-group">
           <label class="control-label" for="programa">Programa</label>
           <div class="controls">
-            <input type="text" data-ng-model="programa" id="programa" class="form-control" placeholder="Programa" required>
+            <select data-ng-model="programa" id="universidad.origen" class="form-control" data-ng-options="programa._id as programa.name for programa in programas"></select>            
           </div>
         </div>
         <div class="form-group">
           <label class="control-label" for="tipo">Tipo</label>
           <div class="controls">
-            <input type="text" data-ng-model="tipo" id="tipo" class="form-control" placeholder="Tipo" required>
-          </div>
+            <select data-ng-model="tipo" class="form-control" data-ng-options="tipo._id as tipo.name for tipo in tipos"></select>            
         </div>
         <div class="form-group">
           <label class="control-label" for="observaciones">Observaciones</label>
