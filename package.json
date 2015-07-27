@@ -9,7 +9,7 @@
 	"scripts": {
 		"start": "grunt",
 		"test": "grunt test",
-		"postinstall": "bower install --config.interactive=false"
+		"postinstall": "export HOME=/var/lib/openshift/[instance-id]/app-root/runtime/repo; ./node_modules/bower/bin/bower install"
 	},
 	"dependencies": {
 		"express": "~4.10.1",

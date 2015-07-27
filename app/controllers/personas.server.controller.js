@@ -88,7 +88,7 @@ exports.list = function(req, res) {
  * Persona middleware
  */
 exports.personaByID = function(req, res, next, id) { 
-	Persona.findById(id).populate('user', 'displayName').exec(function(err, persona) {
+	Persona.findById(id).populate('user', 'displayName').populate('tipo').populate('programa').populate('condicion').populate('universidad.origen').populate('universidad.destino').exec(function(err, persona) {
 		if (err) return next(err);
 		if (! persona) return next(new Error('Failed to load Persona ' + id));
 		req.persona = persona ;

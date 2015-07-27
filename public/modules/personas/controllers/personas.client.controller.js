@@ -78,6 +78,10 @@ angular.module('personas').controller('PersonasController', ['$scope', '$statePa
 		// Find a list of Personas
 		$scope.find = function() {
 			$scope.personas = Personas.personas.query();
+			$scope.programas = Personas.programas.query();
+			$scope.tipos = Personas.tipos.query();
+			$scope.universidades = Personas.universidades.query();
+			$scope.condiciones = Personas.condiciones.query();
 		};
 
 		// Find existing Persona

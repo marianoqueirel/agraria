@@ -44,8 +44,8 @@ var PersonaSchema = new Schema({
   	trim: true
   },
   universidad:{
-  	origen: {type: String, trim: true},
-  	destino: {type: String, trim: true}
+  	origen: {type: Schema.ObjectId, ref: 'Universidad'},
+  	destino: {type: Schema.ObjectId,ref: 'Universidad'}
   },
   tutor:{
   	nombre:{type: String, trim: true},
