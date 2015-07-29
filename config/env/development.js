@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/agrarias-dev',
 	app: {
-		title: 'agrarias - Development Environment'
+		title: 'Cooperación Internacional FCA'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
