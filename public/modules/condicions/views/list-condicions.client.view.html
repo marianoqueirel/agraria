@@ -1,6 +1,6 @@
 <section data-ng-controller="CondicionsController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Condicions</h1>
+        <h1>Condiciones</h1>
     </div>
     <div class="list-group">
         <a data-ng-repeat="condicion in condicions" data-ng-href="#!/condicions/{{condicion._id}}" class="list-group-item">
@@ -14,6 +14,6 @@
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!condicions.$resolved || condicions.length">
-    	No Condicions yet, why don't you <a href="/#!/condicions/create">create one</a>?
+    	No existen Condiciones<a href="/#!/condicions/create">¿Desea cargar una</a>?
     </div>
 </section>
