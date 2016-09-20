@@ -3,17 +3,8 @@
         <h1>Tipos</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="tipo in tipos" data-ng-href="#!/tipos/{{tipo._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="tipo.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="tipo.user.displayName"></span>
-			</small>
+        <a data-ng-repeat="tipo in tipos" data-ng-href="#!/tipos/{{tipo._id}}" class="list-group-item">			
 			<h4 class="list-group-item-heading" data-ng-bind="tipo.name"></h4>
         </a>
-    </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!tipos.$resolved || tipos.length">
-    	No Tipos yet, why don't you <a href="/#!/tipos/create">create one</a>?
-    </div>
+    </div>    
 </section>

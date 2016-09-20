@@ -1,6 +1,6 @@
 <section data-ng-controller="PersonasController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1 data-ng-bind="persona.nombre"></h1>
+		<h1 data-ng-bind="persona.nombre + ' ' + persona.apellido"></h1>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == persona.user._id))">
 		<a class="btn btn-primary" href="/#!/personas/{{persona._id}}/edit">
@@ -9,13 +9,52 @@
 		<a class="btn btn-primary" data-ng-click="remove();">
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="persona.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="persona.user.displayName"></span>
-		</em>
-	</small>
-</section>
+	</div>	
+	<div class="page-header view">
+		<div class="row">
+			<div class="col-md-6">				
+				<label>Dni</label>
+				<h3 data-ng-bind="persona.dni"></h3>	
+				<label>Año Movilidad</label>
+				<h3 data-ng-bind="persona.anio_movilidad"></h3>
+			</div>				
+			<div class="col-md-6">
+				<label>Telefono</label>
+				<h3 data-ng-bind="persona.telefono"></h3>
+				<label>Email</label>
+				<h3 data-ng-bind="persona.email"></h3>
+			</div>		
+		</div>	
+		<div class="row">
+			<div class="col-md-6">
+				<label>Periodo Desde</label>
+				<h3 data-ng-bind="persona.periodo.desde"></h3>
+			</div>
+			<div class="col-md-6"><label>Periodo Hasta</label>
+				<h3 data-ng-bind="persona.periodo.hasta"></h3>
+			</div>				
+		</div>		
+		<div class="row">
+			<div class="col-md-6"><label>Universidad Origen</label>
+				<h3 data-ng-bind="persona.universidad.origen.name"></h3></div>
+				<div class="col-md-6"><label>Universidad Destino</label>
+					<h3 data-ng-bind="persona.universidad.destino.name"></h3></div>
+				</div>
+				<div class="row">
+					<div class="col-md-6"><label>Tutor Nombre</label>
+						<h3 data-ng-bind="persona.tutor.nombre"></h3></div>
+						<div class="col-md-6"><label>Tutor Email</label>
+							<h3 data-ng-bind="persona.tutor.email"></h3></div>
+						</div>
+						<div class="row">
+							<div class="col-md-6"><label>Condición</label>
+								<h3 data-ng-bind="persona.condicion.name"></h3></div>
+								<div class="col-md-6"><label>Programa</label>
+									<h3 data-ng-bind="persona.programa.name"></h3></div>
+								</div>		
+								<label>Tipo</label>
+								<h3 data-ng-bind="persona.tipo.name"></h3>
+								<label>Observaciones</label>
+								<h3 data-ng-bind="persona.observaciones"></h3>		
+							</div>
+						</section>
