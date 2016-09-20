@@ -9,14 +9,16 @@
                 <div class="col-md-2">
                     <h4><strong>Por Año: </strong><input size="4" type="text" data-ng-model="search.anio_movilidad"></h4>
                 </div>
-                <div class="col-md-4">
-                    <h4><strong>Filtrar por Programa:</strong>
-                        <select ng-model="search.programa">
-                            <option ng-repeat="programa in programas | orderBy:name"  ng-value="programa._id">{{programa.name}}</option>
-                        </select>
-                    </h4>
-                </div>
-                <button type="button" class="btn btn-primary" ng-click="search = ''">Limpiar Filtro</button>
+                <button type="button" class="btn btn-primary" ng-click="search = ''">Limpiar Filtros</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="padding-left: 15px"><strong>Por Programa:</strong>
+                    <select ng-model="search.programa">
+                        <option ng-repeat="programa in programas | orderBy:name"  ng-value="programa._id">{{programa.name}}</option>
+                    </select>
+                </h4>
             </div>
         </div>
     </div>
